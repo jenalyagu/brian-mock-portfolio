@@ -87,7 +87,7 @@ export function HeroScrollSequence({ onOpenContact }) {
 
         {/* Hero text — fades out on scroll */}
         <div ref={overlayRef} className="absolute inset-0 flex flex-col z-10 text-white">
-          <div className="flex-grow flex flex-col items-center justify-end md:justify-center text-center px-6 pt-20 pb-12 md:pb-0">
+          <div className="flex-grow flex flex-col items-center justify-end md:justify-center text-center px-6 pb-12 md:pb-0">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -102,40 +102,43 @@ export function HeroScrollSequence({ onOpenContact }) {
               </div>
             </motion.div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.7 }}
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-6 metallic-text leading-tight"
-              style={{
-                textShadow: [
-                  '0 0 6px rgba(0,200,206,0.85)',
-                  '-18px 0 12px rgba(0,200,206,0.45)',
-                  '18px 0 12px rgba(0,200,206,0.45)',
-                  '-55px 0 22px rgba(0,154,147,0.22)',
-                  '55px 0 22px rgba(0,154,147,0.22)',
-                  '-110px 0 35px rgba(0,122,116,0.1)',
-                  '110px 0 35px rgba(0,122,116,0.1)',
-                  '0 -12px 20px rgba(0,154,147,0.18)',
-                ].join(', '),
-              }}
-            >
-              BRIAN MOCK
-            </motion.h1>
+            {/* Name + subtitle — chest position on mobile, in-flow on desktop */}
+            <div className="absolute left-0 right-0 px-6 text-center md:relative md:left-auto md:right-auto md:px-0" style={{ top: 'clamp(44%, 52vh, 58%)' }}>
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.7 }}
+                className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-4 md:mb-6 metallic-text leading-tight"
+                style={{
+                  textShadow: [
+                    '0 0 6px rgba(0,200,206,0.85)',
+                    '-18px 0 12px rgba(0,200,206,0.45)',
+                    '18px 0 12px rgba(0,200,206,0.45)',
+                    '-55px 0 22px rgba(0,154,147,0.22)',
+                    '55px 0 22px rgba(0,154,147,0.22)',
+                    '-110px 0 35px rgba(0,122,116,0.1)',
+                    '110px 0 35px rgba(0,122,116,0.1)',
+                    '0 -12px 20px rgba(0,154,147,0.18)',
+                  ].join(', '),
+                }}
+              >
+                BRIAN MOCK
+              </motion.h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.9 }}
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-8 md:mb-12 text-gray-300 flex items-center gap-2 flex-wrap justify-center"
-            >
-              <span>Senior</span>
-              <AnimatedTextCycle
-                words={['Cinematographer', 'Director', 'Producer', 'Editor', 'Storyteller']}
-                interval={2500}
-                className="metallic-text"
-              />
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.9 }}
+                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-8 md:mb-12 text-gray-300 flex items-center gap-2 flex-wrap justify-center"
+              >
+                <span>Senior</span>
+                <AnimatedTextCycle
+                  words={['Cinematographer', 'Director', 'Producer', 'Editor', 'Storyteller']}
+                  interval={2500}
+                  className="metallic-text"
+                />
+              </motion.div>
+            </div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
