@@ -103,7 +103,7 @@ export function HeroScrollSequence({ onOpenContact }) {
             </motion.div>
 
             {/* Name + subtitle — chest position on mobile, in-flow on desktop */}
-            <div className="absolute left-0 right-0 px-6 text-center md:relative md:left-auto md:right-auto md:px-0" style={{ top: 'clamp(44%, 52vh, 58%)' }}>
+            <div className="absolute left-0 right-0 px-6 text-center md:relative md:left-auto md:right-auto md:px-0" style={{ top: 'clamp(34%, 40vh, 46%)' }}>
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
