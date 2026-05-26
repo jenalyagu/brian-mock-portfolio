@@ -260,7 +260,7 @@ export function CapabilitiesGrid() {
   }, [handleResize, handleMouseMove, animateDots]);
 
   return (
-    <section className="relative min-h-screen bg-[#050505] text-white overflow-hidden py-20 px-6">
+    <section id="capabilities" className="relative min-h-screen bg-[#050505] text-white overflow-hidden py-20 px-6">
       <canvas
         ref={canvasRef}
         className="absolute inset-0 z-0 pointer-events-none opacity-60"
