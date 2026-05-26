@@ -35,7 +35,9 @@ export function DemoReel() {
             boxShadow: '0 0 0 1px rgba(0,200,206,0.06), 0 32px 80px rgba(0,0,0,0.8)',
           }}
         >
-          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent z-10" />
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent z-20" />
+          {/* Covers YouTube title overlay — not removable via API params */}
+          <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-black to-transparent z-10 pointer-events-none" />
           <iframe
             src={`https://www.youtube.com/embed/${REEL_VIDEO_ID}?rel=0&modestbranding=1&color=white`}
             title="Brian Mock Demo Reel"
