@@ -161,34 +161,36 @@ export function HeroScrollSequence({ onOpenContact }) {
             </motion.div>
           </div>
 
-          {/* Stats bar */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.3 }}
-          >
-            <div className="cinematic-glass border-t border-white/10 backdrop-blur-xl">
-              <div className="max-w-7xl mx-auto px-4 md:px-12 py-4 md:py-6 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
-                <div>
-                  <div className="text-3xl font-bold metallic-text mb-1">13+</div>
-                  <div className="text-xs text-gray-400 uppercase tracking-wider">Years Experience</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold metallic-text mb-1">200+</div>
-                  <div className="text-xs text-gray-400 uppercase tracking-wider">Projects Delivered</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold metallic-text mb-1">Global</div>
-                  <div className="text-xs text-gray-400 uppercase tracking-wider">Brand Clients</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold metallic-text mb-1">4K</div>
-                  <div className="text-xs text-gray-400 uppercase tracking-wider">Cinema Quality</div>
-                </div>
+        </div>
+
+        {/* Stats bar — pinned to bottom of hero */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1.3 }}
+          className="absolute bottom-[4.5rem] md:bottom-0 left-0 right-0 z-10"
+        >
+          <div className="cinematic-glass border-t border-white/10 backdrop-blur-xl">
+            <div className="max-w-7xl mx-auto px-4 md:px-12 py-3 md:py-6 grid grid-cols-4 gap-2 md:gap-8 text-center">
+              <div>
+                <div className="text-lg md:text-3xl font-bold metallic-text mb-0.5 md:mb-1">13+</div>
+                <div className="text-[7px] md:text-xs text-gray-400 uppercase tracking-wider">Years Experience</div>
+              </div>
+              <div>
+                <div className="text-lg md:text-3xl font-bold metallic-text mb-0.5 md:mb-1">200+</div>
+                <div className="text-[7px] md:text-xs text-gray-400 uppercase tracking-wider">Projects Delivered</div>
+              </div>
+              <div>
+                <div className="text-lg md:text-3xl font-bold metallic-text mb-0.5 md:mb-1">Global</div>
+                <div className="text-[7px] md:text-xs text-gray-400 uppercase tracking-wider">Brand Clients</div>
+              </div>
+              <div>
+                <div className="text-lg md:text-3xl font-bold metallic-text mb-0.5 md:mb-1">4K</div>
+                <div className="text-[7px] md:text-xs text-gray-400 uppercase tracking-wider">Cinema Quality</div>
               </div>
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
