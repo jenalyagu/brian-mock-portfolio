@@ -97,12 +97,12 @@ export function StickyUI({ onOpenContact }) {
       </AnimatePresence>
 
       {/* Sticky CTA — bottom left */}
-      <div className="fixed bottom-20 md:bottom-8 left-6 z-50">
-        <motion.button
+      <div className="fixed bottom-20 md:bottom-8 left-6 z-[60]">
+        <motion.a
+          href="mailto:expertsmedia@gmail.com"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.5 }}
-          onClick={onOpenContact}
           className="cinematic-glass border border-white/10 px-5 py-3 flex items-center gap-3 hover:bg-white/10 hover:border-white/30 transition-all duration-300 group"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
@@ -110,7 +110,7 @@ export function StickyUI({ onOpenContact }) {
             Let&apos;s_Work
           </span>
           <Mail className="w-3.5 h-3.5 text-white/40 group-hover:text-white/80 transition-colors" />
-        </motion.button>
+        </motion.a>
       </div>
     </>
   );
