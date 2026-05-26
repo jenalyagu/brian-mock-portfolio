@@ -22,9 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# Claude / Gemini local configurations
-.claude
-
-# Local Netlify folder
-.netlify
+*.rtf
+COPY_MAP.md
+.claude/
+ui-ux-pro-max-skill/
