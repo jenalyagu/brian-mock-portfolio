@@ -58,16 +58,17 @@ export function StickyUI({ onOpenContact }) {
               aria-label={label}
             >
               {/* Label — slides in on hover */}
-              <span className="w-10 text-right text-[9px] font-mono tracking-[0.3em] text-white/0 group-hover:text-white/60 transition-all duration-300 uppercase select-none">
+              <span className="w-10 text-right text-[9px] font-mono tracking-[0.3em] text-white/0 group-hover:text-[#00C8CE] transition-all duration-300 uppercase select-none">
                 {label}
               </span>
               {/* Dash */}
               <div
-                className={`w-4 h-px transition-all duration-300 ${
+                className={`h-px transition-all duration-300 ${
                   isActive
-                    ? 'bg-white shadow-[0_0_6px_rgba(255,255,255,0.6)]'
-                    : 'bg-white/20 group-hover:bg-white/50'
+                    ? 'w-5 bg-[#00C8CE]'
+                    : 'w-4 bg-white/20 group-hover:bg-[#00C8CE]/60'
                 }`}
+                style={isActive ? { boxShadow: '0 0 8px rgba(0,200,206,0.8), 0 0 16px rgba(0,200,206,0.4)' } : {}}
               />
             </button>
           );
