@@ -149,7 +149,10 @@ export function HeroScrollSequence({ onOpenContact }) {
               transition={{ duration: 1, delay: 1.1 }}
               className="flex gap-4 justify-center"
             >
-              <button className="cinematic-glass px-8 py-4 rounded-full font-semibold hover:bg-white/20 transition-all transform hover:scale-105">
+              <button
+                onClick={() => document.getElementById('reel')?.scrollIntoView({ behavior: 'smooth' })}
+                className="cinematic-glass px-8 py-4 rounded-full font-semibold hover:bg-white/20 transition-all transform hover:scale-105"
+              >
                 View Reel
               </button>
               <button
