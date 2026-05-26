@@ -1,0 +1,104 @@
+import { useState, useEffect } from "react";
+import { Navbar } from "@/components/Navbar";
+import { HeroScrollSequence } from "@/components/HeroScrollSequence";
+import { CapabilitiesGrid } from "@/components/CapabilitiesGrid";
+import { Footer } from "@/components/Footer";
+import { ScrollManager } from "@/components/ScrollManager";
+import { StickyUI } from "@/components/StickyUI";
+import { AboutSection } from "@/components/AboutSection";
+import { VideoGallery } from "@/components/VideoGallery";
+import { MarqueeDivider } from "@/components/MarqueeDivider";
+import { ColorBarsDivider } from "@/components/ColorBarsDivider";
+import { motion, AnimatePresence } from "framer-motion";
+
+function Loader({ onGone }) {
+  const [progress, setProgress] = useState(0);
+  const [show, setShow] = useState(true);
+
+  useEffect(() => {
+    const start = performance.now();
+    const duration = 1400;
+    let raf;
+    const tick = (now) => {
+      const p = Math.min(100, ((now - start) / duration) * 100);
+      setProgress(p);
+      if (p < 100) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, []);
+
+  useEffect(() => {
+    if (progress >= 100) {
+      const hideTimer = setTimeout(() => {
+        setShow(false);
+        const goneTimer = setTimeout(() => onGone?.(), 850);
+        return () => clearTimeout(goneTimer);
+      }, 500);
+      return () => clearTimeout(hideTimer);
+    }
+  }, [progress]);
+
+  return (
+    <AnimatePresence>
+      {show && (
+        <motion.div
+          key="loader"
+          initial={{ opacity: 1 }}
+          exit={{ opacity: 0, scale: 1.05 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          className="fixed inset-0 z-[100] bg-black flex items-center justify-center pointer-events-none"
+        >
+          <div className="flex flex-col items-center gap-4">
+            <div className="h-[2px] w-64 bg-zinc-900 overflow-hidden">
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: `${progress}%` }}
+                transition={{ duration: 0.3 }}
+                className="h-full bg-white shadow-[0_0_15px_rgba(255,255,255,0.5)]"
+              />
+            </div>
+            <div className="flex justify-between w-64">
+              <p className="text-[8px] font-mono tracking-[0.3em] text-zinc-500 uppercase">System_Init</p>
+              <p className="text-[8px] font-mono tracking-[0.3em] text-zinc-500">{Math.round(progress)}%</p>
+            </div>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+}
+
+function App() {
+  useEffect(() => {
+    document.body.style.overflow = "auto";
+  }, []);
+
+  return (
+    <div className="relative min-h-screen bg-[#000] text-white overflow-x-hidden pb-14 md:pb-0">
+      <Loader onGone={() => {}} />
+
+      <ScrollManager />
+      <StickyUI />
+
+      <div className="vignette" />
+
+      <div className="relative z-10">
+        <Navbar />
+
+        <main>
+          <HeroScrollSequence />
+          <CapabilitiesGrid />
+          <MarqueeDivider />
+          <VideoGallery />
+          <ColorBarsDivider />
+          <AboutSection />
+        </main>
+
+        <Footer />
+      </div>
+    </div>
+  );
+}
+
+export default App;
