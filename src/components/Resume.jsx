@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Mail, Linkedin } from "lucide-react";
+import { Mail } from "lucide-react";
+import { FaLinkedinIn } from "react-icons/fa";
 
 export function Resume({ onOpenContact }) {
   return (
@@ -45,7 +46,7 @@ export function Resume({ onOpenContact }) {
                   whileTap={{ scale: 0.98 }}
                   className="flex-1 py-6 bg-transparent text-white text-[12px] font-bold uppercase tracking-[0.3em] border border-white/20 hover:border-white/50 hover:bg-white/5 transition-all flex items-center justify-center gap-3"
                 >
-                  <Linkedin className="h-4 w-4" /> LinkedIn
+                  <FaLinkedinIn className="h-4 w-4" /> LinkedIn
                 </motion.a>
               </div>
 
