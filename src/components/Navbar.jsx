@@ -53,16 +53,16 @@ export function Navbar({ onOpenContact }) {
         >
           {/* Brand */}
           <div className="flex flex-col">
-            <span className="text-[11px] font-bold tracking-tighter text-white leading-none">
+            <span className="text-sm font-bold tracking-tighter text-white leading-none">
               BM_PRODUCTIONS
             </span>
-            <span className="text-[7px] uppercase tracking-[0.4em] text-zinc-500 mt-0.5">
+            <span className="text-[9px] uppercase tracking-[0.4em] text-zinc-500 mt-0.5">
               v.2026.1.0
             </span>
           </div>
 
           {/* Nav links — hidden on mobile */}
-          <nav className="hidden md:flex items-center gap-8 text-[9px] font-bold uppercase tracking-[0.28em] text-zinc-400">
+          <nav className="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-[0.28em] text-zinc-400">
             <a href="#work"         className="transition-colors hover:text-[#00C8CE]">Work</a>
             <a href="#about"        className="transition-colors hover:text-[#00C8CE]">Profile</a>
             <a href="#capabilities" className="transition-colors hover:text-[#00C8CE]">Stack</a>
@@ -85,7 +85,7 @@ export function Navbar({ onOpenContact }) {
               <div className="h-1 w-1 rounded-full bg-zinc-700" />
               <div className="h-1 w-1 rounded-full bg-zinc-700" />
             </div>
-            <span className="text-[7px] uppercase tracking-widest text-zinc-600">
+            <span className="text-[9px] uppercase tracking-widest text-zinc-600">
               Status: Online
             </span>
           </div>
@@ -105,16 +105,16 @@ export function Navbar({ onOpenContact }) {
               href={href}
               className="flex flex-col items-center gap-1 text-zinc-500 hover:text-white active:text-[#00C8CE] transition-colors px-4 py-1"
             >
-              <Icon className="h-5 w-5" strokeWidth={1.5} />
-              <span className="text-[8px] font-mono uppercase tracking-widest">{label}</span>
+              <Icon className="h-6 w-6" strokeWidth={1.5} />
+              <span className="text-[11px] font-mono uppercase tracking-widest">{label}</span>
             </a>
           ))}
           <button
             onClick={onOpenContact}
             className="flex flex-col items-center gap-1 text-zinc-500 hover:text-white active:text-[#00C8CE] transition-colors px-4 py-1"
           >
-            <Mail className="h-5 w-5" strokeWidth={1.5} />
-            <span className="text-[8px] font-mono uppercase tracking-widest">Contact</span>
+            <Mail className="h-6 w-6" strokeWidth={1.5} />
+            <span className="text-[11px] font-mono uppercase tracking-widest">Contact</span>
           </button>
         </div>
       </nav>

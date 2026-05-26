@@ -64,9 +64,11 @@ export function HeroScrollSequence({ onOpenContact }) {
           const img = images[idx];
           if (img?.complete && img.naturalWidth) drawFrame(ctx, canvas, img);
         }
-        // Fade text out in first 5% of progress
+        // Fade text out after 80% of scroll progress
         if (overlayRef.current) {
-          overlayRef.current.style.opacity = Math.max(0, 1 - self.progress / 0.25);
+          overlayRef.current.style.opacity = self.progress < 0.8
+            ? 1
+            : Math.max(0, 1 - (self.progress - 0.8) / 0.2);
         }
       },
     });
