@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 // Replace with YouTube video ID (the part after ?v= or youtu.be/)
-const REEL_VIDEO_ID = 'REPLACE_ME';
+const REEL_VIDEO_ID = 'FRvXX4W0wmM';
 
 export function DemoReel() {
   return (
