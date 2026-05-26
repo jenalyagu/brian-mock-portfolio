@@ -1,6 +1,6 @@
 import { ArrowUp, Monitor, ShieldCheck, Zap } from "lucide-react";
 
-export function Footer() {
+export function Footer({ onOpenContact }) {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -36,7 +36,7 @@ export function Footer() {
             <ul className="space-y-4">
               <li><a href="#work" className="text-[10px] text-zinc-400 hover:text-white transition-colors uppercase tracking-widest">Selected_Work</a></li>
               <li><a href="#about" className="text-[10px] text-zinc-400 hover:text-white transition-colors uppercase tracking-widest">About_Brian</a></li>
-              <li><a href="#contact" className="text-[10px] text-zinc-400 hover:text-white transition-colors uppercase tracking-widest">Comm_Link</a></li>
+              <li><button onClick={onOpenContact} className="text-[10px] text-zinc-400 hover:text-white transition-colors uppercase tracking-widest">Comm_Link</button></li>
             </ul>
           </div>
           <div>

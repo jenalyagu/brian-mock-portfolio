@@ -9,6 +9,8 @@ import { AboutSection } from "@/components/AboutSection";
 import { VideoGallery } from "@/components/VideoGallery";
 import { MarqueeDivider } from "@/components/MarqueeDivider";
 import { ColorBarsDivider } from "@/components/ColorBarsDivider";
+import { Resume } from "@/components/Resume";
+import { ContactModal } from "@/components/ContactModal";
 import { motion, AnimatePresence } from "framer-motion";
 
 function Loader({ onGone }) {
@@ -70,6 +72,9 @@ function Loader({ onGone }) {
 }
 
 function App() {
+  const [contactOpen, setContactOpen] = useState(false);
+  const openContact = () => setContactOpen(true);
+
   useEffect(() => {
     document.body.style.overflow = "auto";
   }, []);
@@ -79,24 +84,27 @@ function App() {
       <Loader onGone={() => {}} />
 
       <ScrollManager />
-      <StickyUI />
+      <StickyUI onOpenContact={openContact} />
 
       <div className="vignette" />
 
       <div className="relative z-10">
-        <Navbar />
+        <Navbar onOpenContact={openContact} />
 
         <main>
-          <HeroScrollSequence />
+          <HeroScrollSequence onOpenContact={openContact} />
           <CapabilitiesGrid />
           <MarqueeDivider />
           <VideoGallery />
           <ColorBarsDivider />
           <AboutSection />
+          <Resume onOpenContact={openContact} />
         </main>
 
-        <Footer />
+        <Footer onOpenContact={openContact} />
       </div>
+
+      <ContactModal isOpen={contactOpen} onClose={() => setContactOpen(false)} />
     </div>
   );
 }

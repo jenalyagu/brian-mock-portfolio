@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export function Navbar() {
+export function Navbar({ onOpenContact }) {
   const barRef = useRef(null);
 
   useLayoutEffect(() => {
@@ -66,8 +66,8 @@ export function Navbar() {
             <a href="#work"         className="transition-colors hover:text-[#00C8CE]">Work</a>
             <a href="#about"        className="transition-colors hover:text-[#00C8CE]">Profile</a>
             <a href="#capabilities" className="transition-colors hover:text-[#00C8CE]">Stack</a>
-            <a
-              href="#contact-footer"
+            <button
+              onClick={onOpenContact}
               className="px-4 py-1.5 rounded-md text-white transition-all hover:text-[#00C8CE]"
               style={{
                 border: "1px solid rgba(0,200,206,0.28)",
@@ -75,7 +75,7 @@ export function Navbar() {
               }}
             >
               Contact
-            </a>
+            </button>
           </nav>
 
           {/* Status indicator */}
@@ -96,10 +96,9 @@ export function Navbar() {
       <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden border-t border-white/10 bg-black/80 backdrop-blur-xl">
         <div className="flex items-center justify-around px-2 py-3">
           {[
-            { href: "#work",           Icon: Film,  label: "Work" },
-            { href: "#about",          Icon: User,  label: "Profile" },
-            { href: "#capabilities",   Icon: Zap,   label: "Stack" },
-            { href: "#contact-footer", Icon: Mail,  label: "Contact" },
+            { href: "#work",        Icon: Film, label: "Work" },
+            { href: "#about",       Icon: User, label: "Profile" },
+            { href: "#capabilities",Icon: Zap,  label: "Stack" },
           ].map(({ href, Icon, label }) => (
             <a
               key={label}
@@ -110,6 +109,13 @@ export function Navbar() {
               <span className="text-[8px] font-mono uppercase tracking-widest">{label}</span>
             </a>
           ))}
+          <button
+            onClick={onOpenContact}
+            className="flex flex-col items-center gap-1 text-zinc-500 hover:text-white active:text-[#00C8CE] transition-colors px-4 py-1"
+          >
+            <Mail className="h-5 w-5" strokeWidth={1.5} />
+            <span className="text-[8px] font-mono uppercase tracking-widest">Contact</span>
+          </button>
         </div>
       </nav>
     </>

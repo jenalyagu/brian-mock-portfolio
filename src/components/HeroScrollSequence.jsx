@@ -21,7 +21,7 @@ function drawFrame(ctx, canvas, img) {
   ctx.drawImage(img, x, y, img.naturalWidth * scale, img.naturalHeight * scale);
 }
 
-export function HeroScrollSequence() {
+export function HeroScrollSequence({ onOpenContact }) {
   const sequenceRef = useRef(null);
   const canvasRef = useRef(null);
   const overlayRef = useRef(null);
@@ -146,7 +146,10 @@ export function HeroScrollSequence() {
               <button className="cinematic-glass px-8 py-4 rounded-full font-semibold hover:bg-white/20 transition-all transform hover:scale-105">
                 View Reel
               </button>
-              <button className="cinematic-glass px-8 py-4 rounded-full font-semibold hover:bg-white/20 transition-all transform hover:scale-105">
+              <button
+                onClick={onOpenContact}
+                className="cinematic-glass px-8 py-4 rounded-full font-semibold hover:bg-white/20 transition-all transform hover:scale-105"
+              >
                 Get in Touch
               </button>
             </motion.div>

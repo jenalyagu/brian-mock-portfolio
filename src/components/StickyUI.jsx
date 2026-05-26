@@ -10,7 +10,7 @@ const SECTIONS = [
   { id: 'contact-footer', label: 'CONTACT' },
 ];
 
-export function StickyUI() {
+export function StickyUI({ onOpenContact }) {
   const [activeSection, setActiveSection] = useState('hero');
   const [showBackToTop, setShowBackToTop] = useState(false);
   const observersRef = useRef([]);
@@ -40,6 +40,7 @@ export function StickyUI() {
   }, []);
 
   const scrollTo = (id) => {
+    if (id === 'contact-footer') { onOpenContact?.(); return; }
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -100,6 +101,7 @@ export function StickyUI() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.5 }}
+          onClick={onOpenContact}
           className="cinematic-glass border border-white/10 px-5 py-3 flex items-center gap-3 hover:bg-white/10 hover:border-white/30 transition-all duration-300 group"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
