@@ -92,9 +92,9 @@ export function HeroScrollSequence({ onOpenContact }) {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="mb-8"
+              className="absolute top-20 left-0 right-0 flex justify-center md:relative md:top-auto md:mb-8"
             >
-              <div className="cinematic-glass px-4 py-2 rounded-full text-xs uppercase tracking-wider mb-8 inline-block">
+              <div className="cinematic-glass px-4 py-2 rounded-full text-xs uppercase tracking-wider inline-block">
                 <span className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
                   Available for Projects
