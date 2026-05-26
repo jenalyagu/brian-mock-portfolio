@@ -87,7 +87,7 @@ export function HeroScrollSequence({ onOpenContact }) {
 
         {/* Hero text — fades out on scroll */}
         <div ref={overlayRef} className="absolute inset-0 flex flex-col z-10 text-white">
-          <div className="flex-grow flex flex-col items-center justify-center text-center px-6 pt-20">
+          <div className="flex-grow flex flex-col items-center justify-end md:justify-center text-center px-6 pt-20 pb-12 md:pb-0">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
