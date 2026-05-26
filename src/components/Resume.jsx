@@ -1,9 +1,14 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Download, Mail, Activity, ShieldCheck, Cpu, Terminal, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ContactModal } from "@/components/ContactModal";
 
 export function Resume() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
+    <>
     <div id="about" className="px-4 sm:px-6 md:px-10">
       {/* About Section */}
       <section className="py-16 md:py-32 border-t border-white/5">
@@ -73,7 +78,14 @@ export function Resume() {
           
           <div className="relative z-10 max-w-3xl mx-auto">
             <p className="mb-6 text-[10px] font-bold uppercase tracking-[0.5em] text-zinc-500">INITIALIZE_COLLABORATION</p>
-            <h2 className="text-5xl md:text-8xl font-display font-bold tracking-tighter text-white mb-10 italic">LET'S_WORK</h2>
+            <motion.button
+              onClick={() => setModalOpen(true)}
+              whileHover={{ scale: 1.01 }}
+              whileTap={{ scale: 0.98 }}
+              className="text-5xl md:text-8xl font-display font-bold tracking-tighter text-white mb-10 italic cursor-pointer hover:text-zinc-200 transition-colors"
+            >
+              LET'S_WORK
+            </motion.button>
             
             <p className="text-xl text-zinc-400 font-light leading-relaxed mb-16 tracking-wide">
               Available for senior production roles, strategic contracts, and high-impact creative engagements. Optimized for Bay Area or Global Remote.
@@ -120,6 +132,9 @@ export function Resume() {
         </div>
       </section>
     </div>
+
+    <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+    </>
   );
 }
 
