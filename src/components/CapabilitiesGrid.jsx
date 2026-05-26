@@ -1,6 +1,6 @@
 import { useEffect, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
-import { Video, Camera, Film, Zap, Layers, Sparkles } from "lucide-react";
+import { Video, Film, Zap, Layers, Sparkles, ClipboardList } from "lucide-react";
 
 const DOT_SPACING = 30;
 const BASE_OPACITY_MIN = 0.15;
@@ -15,21 +15,9 @@ const GRID_CELL_SIZE = Math.max(50, Math.floor(INTERACTION_RADIUS / 1.5));
 const CAPABILITIES = [
   {
     icon: Video,
-    title: "Corporate Video",
+    title: "Video Production",
     description:
       "High-impact branded content for tech, construction, and real estate sectors. From concept to delivery.",
-  },
-  {
-    icon: Camera,
-    title: "Drone Cinematography",
-    description:
-      "FAA Part 107 certified aerial footage. Stunning perspectives for any project scale.",
-  },
-  {
-    icon: Film,
-    title: "Motion Graphics & VFX",
-    description:
-      "Advanced compositing, title design, and visual effects that elevate your story.",
   },
   {
     icon: Zap,
@@ -39,15 +27,27 @@ const CAPABILITIES = [
   },
   {
     icon: Layers,
-    title: "Post-Production",
+    title: "Editor",
     description:
       "Expert editing, color grading, sound design, and finishing for broadcast-ready deliverables.",
+  },
+  {
+    icon: Film,
+    title: "Motion Graphics & VFX",
+    description:
+      "Advanced compositing, title design, and visual effects that elevate your story.",
   },
   {
     icon: Sparkles,
     title: "Asset Management",
     description:
       "Organized media libraries, archival systems, and streamlined production pipelines.",
+  },
+  {
+    icon: ClipboardList,
+    title: "Project Management",
+    description:
+      "Lead projects through all phases of production from concept to delivery.",
   },
 ];
 

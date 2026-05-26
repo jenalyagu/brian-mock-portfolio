@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Download, Mail, Activity, ShieldCheck, Cpu, Terminal } from "lucide-react";
+import { Download, Mail, Activity, ShieldCheck, Cpu, Terminal, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Resume() {
@@ -80,13 +80,26 @@ export function Resume() {
             </p>
             
             <div className="flex flex-col items-center justify-center gap-6">
-              <motion.button 
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full max-w-md py-6 bg-white text-black text-[14px] font-bold uppercase tracking-[0.4em] hover:bg-zinc-200 transition-all flex items-center justify-center gap-4"
-              >
-                <Mail className="h-4 w-4" /> Open_Comm_Channel
-              </motion.button>
+              <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
+                <motion.a
+                  href="mailto:expertsmedia@gmail.com"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="flex-1 py-6 bg-white text-black text-[12px] font-bold uppercase tracking-[0.3em] hover:bg-zinc-200 transition-all flex items-center justify-center gap-3"
+                >
+                  <Mail className="h-4 w-4" /> Send_Email
+                </motion.a>
+                <motion.a
+                  href="https://www.linkedin.com/in/bmock1/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="flex-1 py-6 bg-transparent text-white text-[12px] font-bold uppercase tracking-[0.3em] border border-white/20 hover:border-white/50 hover:bg-white/5 transition-all flex items-center justify-center gap-3"
+                >
+                  <Linkedin className="h-4 w-4" /> LinkedIn
+                </motion.a>
+              </div>
               
               <div className="flex gap-10 mt-12 pt-12 border-t border-white/5 w-full justify-center">
                 <div className="text-center">

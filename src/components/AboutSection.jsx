@@ -45,7 +45,7 @@ const skills = [
   },
 ];
 
-const clients = ["Oracle", "Apple Arcade", "Lambda", "Sierra Circuits", "Pika"];
+const clients = ["Oracle", "Apple", "Nat Geo", "Cookies Clothing", "and more"];
 
 // ─── Animations ───────────────────────────────────────────────────────────────
 
@@ -161,23 +161,25 @@ export function AboutSection() {
             <motion.p {...fadeUp(0.15)} className="text-base text-zinc-400 leading-relaxed">
               Brian Mock is a Senior Video Producer and Editor with over 13 years of experience
               across corporate video, branded content, documentary production, and AI-assisted
-              creative workflows. He's worked with enterprise clients including{" "}
+              creative workflows. He's worked for enterprise tech companies including{" "}
               <span className="text-white font-medium">Oracle</span>,{" "}
-              <span className="text-white font-medium">Apple Arcade</span>, and{" "}
-              <span className="text-white font-medium">Lambda</span> — bringing the same
-              senior-level discipline to every project regardless of scale.
+              <span className="text-white font-medium">Apple</span>, and now providing contract
+              solutions — bringing the same senior-level discipline to every project regardless
+              of scale.
             </motion.p>
 
             <motion.p {...fadeUp(0.2)} className="text-base text-zinc-500 leading-relaxed">
-              From pre-production planning and on-set direction to color grading and final
-              export, Brian operates as a single creative partner across the entire production
-              pipeline. FAA Part 107 licensed drone operator. Technically fluent across
-              Premiere Pro, After Effects, and DaVinci Resolve.
+              From pre-production planning and on-set direction to editing and AI integration,
+              Brian operates as a single creative partner across the entire production pipeline.
+              FAA Part 107 licensed drone operator. Technically fluent across Premiere Pro,
+              Photoshop, Illustrator, After Effects, and AI tools including: Higgsfield,
+              Seedance 2.0, Kling 3, veo3, Nano Banana, Chat-GPT image 2.0, Eleven Labs,
+              and more.
             </motion.p>
 
             <motion.p {...fadeUp(0.22)} className="text-sm text-zinc-600 italic leading-relaxed border-l-2 pl-4" style={{ borderColor: `rgba(0,200,206,0.35)` }}>
               "I work at the intersection of creative direction and technical execution —
-              one partner from concept to final export."
+              one partner from concept to final delivery."
             </motion.p>
 
             {/* Client name strip */}
