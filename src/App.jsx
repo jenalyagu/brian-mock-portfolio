@@ -96,7 +96,6 @@ function App() {
           <CapabilitiesGrid />
           <MarqueeDivider />
           <VideoGallery />
-          <ColorBarsDivider />
           <AboutSection />
           <Resume onOpenContact={openContact} />
         </main>
