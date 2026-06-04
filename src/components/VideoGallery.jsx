@@ -33,7 +33,7 @@ export function VideoGallery() {
   };
 
   return (
-    <section id="work" className="py-24 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: "#070708" }}>
+    <section id="work" className="pt-14 pb-24 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: "#070708" }}>
       <div className="max-w-7xl mx-auto">
         {/* Section heading */}
         <motion.div

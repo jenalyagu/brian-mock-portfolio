@@ -10,6 +10,7 @@ import { VideoGallery } from "@/components/VideoGallery";
 import { MarqueeDivider } from "@/components/MarqueeDivider";
 import { ColorBarsDivider } from "@/components/ColorBarsDivider";
 import { DemoReel } from "@/components/DemoReel";
+import { ClientLogos } from "@/components/ClientLogos";
 import { Resume } from "@/components/Resume";
 import { ContactModal } from "@/components/ContactModal";
 import { motion, AnimatePresence } from "framer-motion";
@@ -95,8 +96,9 @@ function App() {
         <main>
           <HeroScrollSequence onOpenContact={openContact} />
           <CapabilitiesGrid />
-          <DemoReel />
           <MarqueeDivider />
+          <DemoReel />
+          <ClientLogos />
           <VideoGallery />
           <AboutSection />
           <Resume onOpenContact={openContact} />
