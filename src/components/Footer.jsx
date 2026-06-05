@@ -42,7 +42,7 @@ export function Footer({ onOpenContact }) {
           <div>
             <p className="text-[9px] font-bold text-zinc-600 uppercase tracking-widest mb-6">Social</p>
             <ul className="space-y-4">
-              <li><a href="#" className="text-[10px] text-zinc-400 hover:text-white transition-colors uppercase tracking-widest">LinkedIn</a></li>
+              <li><a href="https://www.linkedin.com/in/bmock1/" target="_blank" rel="noopener noreferrer" className="text-[10px] text-zinc-400 hover:text-white transition-colors uppercase tracking-widest">LinkedIn</a></li>
               <li><a href="#" className="text-[10px] text-zinc-400 hover:text-white transition-colors uppercase tracking-widest">Vimeo</a></li>
               <li><a href="#" className="text-[10px] text-zinc-400 hover:text-white transition-colors uppercase tracking-widest">Instagram</a></li>
             </ul>

@@ -17,19 +17,19 @@ const CAPABILITIES = [
     icon: Video,
     title: "Video Production",
     description:
-      "High-impact branded content for tech, construction, and real estate sectors. From concept to delivery.",
+      "High-impact branded content for tech companies, and brands. From concept to delivery.",
   },
   {
     icon: Zap,
     title: "AI Video Workflows",
     description:
-      "Cutting-edge integration of Pika, Runway, and generative tools for rapid iteration.",
+      "Cutting-edge integration of Higgsfield, Seedance, Kling, Flow, HeyGen, Eleven Labs, and generative tools for rapid iteration.",
   },
   {
     icon: Layers,
     title: "Editor",
     description:
-      "Expert editing, color grading, sound design, and finishing for broadcast-ready deliverables.",
+      "Expert in the Adobe Creative Suite editing, animating, sound design, and finishing for broadcast-ready deliverables.",
   },
   {
     icon: Film,

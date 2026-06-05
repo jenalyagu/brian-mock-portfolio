@@ -172,6 +172,7 @@ export function Work() {
 
   const filteredWork = useMemo(() => {
     if (activeFilter === "All") return workSamples;
+    if (activeFilter === "Selected") return workSamples.filter((item) => item.featured);
     return workSamples.filter((item) => item.category === activeFilter);
   }, [activeFilter]);
 
@@ -184,7 +185,7 @@ export function Work() {
           <div className="flex items-center gap-3 mb-4">
             <div className="h-[1px] w-8 bg-zinc-700" />
             <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-zinc-500">
-              Asset Library
+              Portfolio
             </p>
           </div>
           <h2 className="text-5xl md:text-7xl font-display font-bold tracking-tighter metallic-text">

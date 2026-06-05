@@ -1,8 +1,8 @@
-import { 
-  Camera, 
-  Plane, 
-  MonitorPlay, 
-  Layers, 
+import {
+  Camera,
+  Plane,
+  MonitorPlay,
+  Layers,
   Sparkles,
   Database,
 } from "lucide-react";
@@ -10,8 +10,8 @@ import {
 export const workSamples = [
   {
     id: 1,
-    title: "Sports VFX",
-    category: "AI Enhanced",
+    title: "Sports VFX — AI Generated",
+    category: "Motion",
     role: "Motion Graphics / VFX Editor",
     description:
       "High-energy sports content with motion graphics and visual effects. Kinetic compositing and dynamic title work built to amplify the footage.",
@@ -52,46 +52,98 @@ export const workSamples = [
   },
   {
     id: 4,
-    title: "Apple Arcade — Asset Management",
-    category: "Asset Management",
-    role: "Content Production / Asset Management Lead",
-    description:
-      "Production support and digital asset management for Apple Arcade. Large-scale content libraries and production workflows managed to Apple's standards.",
-    tags: ["Apple", "Gaming", "Assets"],
-    youtubeUrl: "https://www.youtube.com/watch?v=REPLACE_ME",
-    thumbnail: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=900&h=506&fit=crop&q=80",
-    accent: "from-zinc-900 via-zinc-800/60 to-zinc-950",
-    cta: "View Project Details"
-  },
-  {
-    id: 5,
-    title: "Oracle — Corporate Video Production",
+    title: "Oracle x Mack Trucks Partnership",
     category: "Corporate",
     role: "Senior Video Producer / Editor",
     description:
-      "Internal and external video for one of the world's largest enterprise tech companies. Clean, professional, on-brand, delivered to enterprise standards across multiple formats.",
+      "Senior Video Producer for one of the world's largest enterprise tech companies. Clean, professional, on-brand, delivered to enterprise standards across multiple formats.",
     tags: ["Corporate", "Tech", "Enterprise"],
     featured: true,
-    youtubeUrl: "https://www.youtube.com/watch?v=REPLACE_ME",
+    youtubeUrl: "https://www.youtube.com/watch?v=Vura5l4JASU",
     thumbnail: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&h=506&fit=crop&q=80",
     accent: "from-zinc-900 via-stone-800/60 to-zinc-950",
     cta: "Watch Project"
   },
   {
-    id: 6,
-    title: "Professional Boxer: Pedro Cruz",
-    category: "Documentary",
-    role: "Producer / DP / Editor",
+    id: 5,
+    title: "Wiggle Uses Oracle to Understand Their Athletes",
+    category: "Corporate",
+    role: "Senior Video Producer / Editor",
     description:
-      "Character-driven branded documentary. Real location, real story — produced handheld and verité-style to hold attention without heavy production overhead.",
-    tags: ["Documentary", "Branded", "Field"],
-    youtubeUrl: "https://youtu.be/SWMbwNwh2p0",
-    thumbnail: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=900&h=506&fit=crop&q=80",
-    accent: "from-zinc-900 via-neutral-800/50 to-zinc-950",
+      "Senior Video Producer for one of the world's largest enterprise tech companies. Clean, professional, on-brand, delivered to enterprise standards across multiple formats.",
+    tags: ["Corporate", "Tech", "Enterprise"],
+    youtubeUrl: "https://www.youtube.com/watch?v=JFnWVcHa7_g",
+    thumbnail: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&h=506&fit=crop&q=80",
+    accent: "from-zinc-900 via-neutral-800/40 to-zinc-950",
+    cta: "Watch Project"
+  },
+  {
+    id: 6,
+    title: "Oracle University Ribbon Cutting",
+    category: "Corporate",
+    role: "Senior Video Producer / Editor",
+    description:
+      "Internal and external video for one of the world's largest enterprise tech companies. Clean, professional, on-brand, delivered to enterprise standards across multiple formats.",
+    tags: ["Corporate", "Tech", "Enterprise"],
+    youtubeUrl: "https://www.youtube.com/watch?v=jj7aNPOcGrg",
+    thumbnail: "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=900&h=506&fit=crop&q=80",
+    accent: "from-zinc-900 via-zinc-800/50 to-zinc-950",
     cta: "Watch Project"
   },
   {
     id: 7,
+    title: "Apple Arcade — New Release",
+    category: "Asset Management",
+    role: "Content Production / Asset Management Lead",
+    description:
+      "Production support and digital asset management for Apple. Large-scale video and digital assets, workflows managed to Apple's standards.",
+    tags: ["Apple", "Gaming", "Assets"],
+    youtubeUrl: "https://www.youtube.com/watch?v=RI0dWy1CVfw",
+    thumbnail: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=900&h=506&fit=crop&q=80",
+    accent: "from-zinc-900 via-zinc-800/60 to-zinc-950",
+    cta: "Watch Project"
+  },
+  {
+    id: 8,
+    title: "Apple Keynote — iOS Release",
+    category: "Asset Management",
+    role: "Content Production / Asset Management Lead",
+    description:
+      "Production support and digital asset management for Apple. Large-scale video and digital assets, workflows managed to Apple's standards.",
+    tags: ["Apple", "iOS", "Assets"],
+    youtubeUrl: "https://www.youtube.com/watch?v=-rAeqN-Q7x4",
+    thumbnail: "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=900&h=506&fit=crop&q=80",
+    accent: "from-zinc-900 via-zinc-800/50 to-zinc-950",
+    cta: "Watch Project"
+  },
+  {
+    id: 9,
+    title: "Apple Keynote — iOS Release",
+    category: "Asset Management",
+    role: "Content Production / Asset Management Lead",
+    description:
+      "Production support and digital asset management for Apple. Large-scale video and digital assets, workflows managed to Apple's standards.",
+    tags: ["Apple", "iOS", "Assets"],
+    youtubeUrl: "https://www.youtube.com/watch?v=psL_5RIBqnY",
+    thumbnail: "https://images.unsplash.com/photo-1614624532983-4ce03382d63d?w=900&h=506&fit=crop&q=80",
+    accent: "from-zinc-900 via-stone-800/50 to-zinc-950",
+    cta: "Watch Project"
+  },
+  {
+    id: 10,
+    title: "AI Video Generations",
+    category: "AI",
+    role: "Prompt Engineer, Content Production / Asset Management Lead",
+    description:
+      "Cutting-edge AI video generation workflow using Higgsfield, Seedance, Kling, and next-gen generative tools. Rapid iteration from concept to polished output.",
+    tags: ["AI", "Higgsfield", "Video"],
+    youtubeUrl: "https://www.youtube.com/watch?v=REPLACE_ME",
+    thumbnail: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=900&h=506&fit=crop&q=80",
+    accent: "from-zinc-900 via-zinc-800/60 to-zinc-950",
+    cta: "View Project Details"
+  },
+  {
+    id: 11,
     title: "Drone Demo Reel",
     category: "Drone",
     role: "Producer / Drone Operator / Editor",
@@ -104,55 +156,16 @@ export const workSamples = [
     cta: "Watch Project"
   },
   {
-    id: 8,
-    title: "Commercial Building — FTG",
-    category: "Drone",
-    role: "Producer / Editor",
-    description:
-      "Video producer and editor, managing various projects.",
-    tags: ["Building", "Commercial", "Aerial"],
-    youtubeUrl: "https://youtu.be/UVf9KjF72bI",
-    thumbnail: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&h=506&fit=crop&q=80",
-    accent: "from-zinc-900 via-neutral-800/40 to-zinc-950",
-    cta: "Watch Project"
-  },
-  {
-    id: 9,
-    title: "Residential Building Projects",
-    category: "Drone",
-    role: "Producer / Drone Operator / Editor",
-    description:
-      "Multi-property residential construction coverage. Aerial progress documentation and showcase footage operated under FAA Part 107.",
-    tags: ["Drone", "Real Estate", "Construction"],
-    youtubeUrl: "https://youtu.be/HUDPoEkWKpA",
-    thumbnail: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=506&fit=crop&q=80",
-    accent: "from-zinc-900 via-stone-800/50 to-zinc-950",
-    cta: "Watch Project"
-  },
-  {
-    id: 10,
-    title: "Featured Home Highlight — Social",
-    category: "Real Estate",
-    role: "Producer / Editor",
-    description:
-      "Short-form property highlight optimized for social. Fast, clean, visually led — built to stop the scroll and convert interest into showings.",
-    tags: ["Real Estate", "Social", "Short-Form"],
-    youtubeUrl: "https://youtu.be/9pUtI76oURM",
-    thumbnail: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=900&h=506&fit=crop&q=80",
-    accent: "from-zinc-900 via-neutral-700/40 to-zinc-950",
-    cta: "Watch Project"
-  },
-  {
-    id: 11,
-    title: "Featured Home — Video Production",
-    category: "Real Estate",
+    id: 12,
+    title: "Professional Boxer: Pedro Cruz",
+    category: "Documentary",
     role: "Producer / DP / Editor",
     description:
-      "Full-length real estate listing video. Interior walk-through, exterior aerials, and lifestyle framing — the complete package for premium property marketing.",
-    tags: ["Real Estate", "Production", "Listing"],
-    youtubeUrl: "https://youtu.be/dPYImoLtWXw",
-    thumbnail: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=506&fit=crop&q=80",
-    accent: "from-zinc-900 via-zinc-800/50 to-zinc-950",
+      "Character-driven branded documentary. Real location, real story — produced handheld and verité-style to hold attention without heavy production overhead.",
+    tags: ["Documentary", "Branded", "Field"],
+    youtubeUrl: "https://youtu.be/SWMbwNwh2p0",
+    thumbnail: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=900&h=506&fit=crop&q=80",
+    accent: "from-zinc-900 via-neutral-800/50 to-zinc-950",
     cta: "Watch Project"
   },
 ];
@@ -234,7 +247,7 @@ export const capabilities = [
   },
 ];
 
-export const filters = ["All", "Full-Stack Production", "AI Enhanced", "Corporate", "Drone", "Real Estate", "Documentary", "Asset Management"];
+export const filters = ["All", "Selected", "AI", "Corporate", "Drone", "Real Estate", "Documentary", "Motion"];
 
 export const roleFits = [
   "Range without the overhead",

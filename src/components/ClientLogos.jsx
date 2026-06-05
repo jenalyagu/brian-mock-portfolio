@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 const LOGOS = [
   { name: 'Apple',       src: '/logos/Apple_Logo_bw.png' },
   { name: 'Oracle',      src: '/logos/Oracle_logo_bw.png' },
-  { name: 'Nat Geo',     src: '/logos/NatGEo_bw.png' },
+  { name: 'Nat Geo',     src: '/logos/NatGEo_bw.png', imgClass: 'max-h-12' },
   { name: 'Cookies',     src: '/logos/Cookies_logo.webp' },
   { name: 'Hogarth',     src: '/logos/Hogarth_bw.png' },
-  { name: 'du',          src: '/logos/Du_bw.png' },
+  { name: 'du',          src: '/logos/Du_bw.png', imgClass: 'max-h-12' },
   { name: 'Experts',     src: '/logos/EXPERTS_bw.png' },
   { name: 'Independence',src: '/logos/IndependenceBC_bw.png' },
-  { name: 'Wall to Wall',src: '/logos/WalltoWall_bw.png' },
+  { name: 'Wall to Wall',src: '/logos/WalltoWall_bw.png', imgClass: 'max-h-14' },
 ];
 
 export function ClientLogos() {
@@ -60,7 +60,7 @@ export function ClientLogos() {
               <img
                 src={logo.src}
                 alt={logo.name}
-                className="relative z-10 max-h-8 max-w-[75%] w-auto object-contain transition-all duration-300 group-hover:brightness-125"
+                className={`relative z-10 ${logo.imgClass ?? 'max-h-8'} max-w-full w-auto object-contain transition-all duration-300 group-hover:brightness-125`}
                 style={{
                   filter: 'grayscale(1) invert(1) brightness(0.8)',
                   mixBlendMode: 'screen',
