@@ -17,7 +17,7 @@ export const workSamples = [
       "High-energy sports content with motion graphics and visual effects. Kinetic compositing and dynamic title work built to amplify the footage.",
     tags: ["VFX", "Motion", "Sports"],
     featured: true,
-    youtubeUrl: "https://youtu.be/T8V-fdVXRlc",
+    youtubeUrl: "https://youtu.be/MyyG16Ac2Pg",
     thumbnail: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&h=506&fit=crop&q=80",
     accent: "from-zinc-900 via-neutral-800/50 to-zinc-950",
     cta: "Watch Project"
@@ -31,7 +31,7 @@ export const workSamples = [
       "Technically precise product video for Sierra Circuits showcasing high-performance PCB manufacturing in the automotive sector. B2B precision without losing visual momentum.",
     tags: ["Premiere", "B2B", "Production"],
     featured: true,
-    youtubeUrl: "https://youtu.be/3WL6DFD2QMg",
+    youtubeUrl: "https://youtu.be/JZ6eHPIcTd0",
     thumbnail: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=900&h=506&fit=crop&q=80",
     accent: "from-zinc-900 via-neutral-800/60 to-zinc-950",
     cta: "Watch Project"
