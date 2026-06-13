@@ -196,7 +196,7 @@ export function Capabilities() {
                 LOCATION: BAY_AREA_CA
               </div>
               <div className="font-mono text-xs text-zinc-500 tracking-[0.3em] uppercase">
-                EXPERIENCE: 13+_YEARS
+                EXPERIENCE: 15+_YEARS
               </div>
             </div>
             <div className="font-mono text-xs text-zinc-500 tracking-[0.3em] uppercase">

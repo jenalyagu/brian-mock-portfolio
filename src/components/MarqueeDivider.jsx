@@ -5,11 +5,9 @@ const ITEMS = [
   '●',
   'BAY AREA CA',
   '●',
-  '13+ YEARS',
+  '15+ YEARS',
   '●',
-  'CINEMA 4K',
-  '●',
-  'DEMO_REEL_2026',
+  'DEMO_REEL',
   '●',
 ];
 

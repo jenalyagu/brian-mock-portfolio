@@ -6,8 +6,8 @@ const REEL_VIDEO_ID = 'FRvXX4W0wmM';
 const ACCENT = '#00C8CE';
 
 const STATS = [
-  { value: '10+', label: 'Years Directing' },
-  { value: '50+', label: 'Projects Produced' },
+  { value: '15+', label: 'Years Experience Using Adobe Creative Suite' },
+  { value: '10+', label: 'Years Managing Cross-Functional Projects' },
   { value: 'Fortune 500', label: 'Client Roster' },
 ];
 

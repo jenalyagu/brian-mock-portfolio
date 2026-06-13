@@ -9,7 +9,7 @@ const stats = [
   { value: "15+", label: "Years Experience" },
   { value: "200+", label: "Projects Delivered" },
   { value: "Global", label: "Brand Clients" },
-  { value: "8+", label: "Project Manager" },
+  { value: "4K", label: "Cinema Quality" },
 ];
 
 const skills = [
