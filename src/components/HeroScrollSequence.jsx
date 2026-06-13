@@ -41,13 +41,25 @@ export function HeroScrollSequence({ onOpenContact }) {
     setSize();
     window.addEventListener('resize', setSize);
 
-    const images = Array.from({ length: FRAME_COUNT }, (_, i) => {
-      const img = new Image();
-      img.src = frameUrl(i);
-      if (i === 1) img.onload = () => drawFrame(ctx, canvas, img);
-      return img;
-    });
+    // Pre-allocate the array so ScrollTrigger can index into it immediately
+    const images = Array.from({ length: FRAME_COUNT }, () => new Image());
     imagesRef.current = images;
+
+    // Load the first visible frame right away
+    images[1].onload = () => drawFrame(ctx, canvas, images[1]);
+    images[1].src = frameUrl(1);
+
+    // After first frame paints, drip-load the rest without blocking the main thread
+    images[1].addEventListener('load', () => {
+      let i = 0;
+      const loadNext = () => {
+        if (i >= FRAME_COUNT) return;
+        if (i !== 1) images[i].src = frameUrl(i); // skip index 1, already loaded
+        i++;
+        requestIdleCallback ? requestIdleCallback(loadNext) : setTimeout(loadNext, 0);
+      };
+      loadNext();
+    }, { once: true });
 
     const frameSt = ScrollTrigger.create({
       trigger: sequenceRef.current,
@@ -176,7 +188,7 @@ export function HeroScrollSequence({ onOpenContact }) {
           <div className="cinematic-glass border-t border-white/10 backdrop-blur-xl">
             <div className="max-w-7xl mx-auto px-4 md:px-12 py-3 md:py-6 grid grid-cols-4 gap-2 md:gap-8 text-center">
               <div>
-                <div className="text-lg md:text-3xl font-bold metallic-text mb-0.5 md:mb-1">13+</div>
+                <div className="text-lg md:text-3xl font-bold metallic-text mb-0.5 md:mb-1">15+</div>
                 <div className="text-[7px] md:text-xs text-gray-400 uppercase tracking-wider">Years Experience</div>
               </div>
               <div>
@@ -188,8 +200,8 @@ export function HeroScrollSequence({ onOpenContact }) {
                 <div className="text-[7px] md:text-xs text-gray-400 uppercase tracking-wider">Brand Clients</div>
               </div>
               <div>
-                <div className="text-lg md:text-3xl font-bold metallic-text mb-0.5 md:mb-1">4K</div>
-                <div className="text-[7px] md:text-xs text-gray-400 uppercase tracking-wider">Cinema Quality</div>
+                <div className="text-lg md:text-3xl font-bold metallic-text mb-0.5 md:mb-1">8+</div>
+                <div className="text-[7px] md:text-xs text-gray-400 uppercase tracking-wider">Project Manager</div>
               </div>
             </div>
           </div>
