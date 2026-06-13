@@ -200,8 +200,8 @@ export function HeroScrollSequence({ onOpenContact }) {
                 <div className="text-[7px] md:text-xs text-gray-400 uppercase tracking-wider">Brand Clients</div>
               </div>
               <div>
-                <div className="text-lg md:text-3xl font-bold metallic-text mb-0.5 md:mb-1">8+</div>
-                <div className="text-[7px] md:text-xs text-gray-400 uppercase tracking-wider">Project Manager</div>
+                <div className="text-lg md:text-3xl font-bold metallic-text mb-0.5 md:mb-1">10k+</div>
+                <div className="text-[7px] md:text-xs text-gray-400 uppercase tracking-wider">Production Hours</div>
               </div>
             </div>
           </div>

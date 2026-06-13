@@ -159,7 +159,7 @@ export function AboutSection() {
             </motion.h3>
 
             <motion.p {...fadeUp(0.15)} className="text-base text-zinc-400 leading-relaxed">
-              Brian Mock is a Senior Video Producer and Editor with over 13 years of experience
+              Brian Mock is a Senior Video Producer and Editor with over 15 years of experience
               across corporate video, branded content, documentary production, and AI-assisted
               creative workflows. He's worked for enterprise tech companies including{" "}
               <span className="text-white font-medium">Oracle</span>,{" "}
