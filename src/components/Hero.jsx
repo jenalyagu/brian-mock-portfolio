@@ -254,7 +254,7 @@ export function Hero() {
         <div className="cinematic-glass border-t border-white/10 backdrop-blur-xl">
           <div className="max-w-7xl mx-auto px-4 md:px-12 py-4 md:py-6 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold metallic-text mb-1">13+</div>
+              <div className="text-3xl font-bold metallic-text mb-1">15+</div>
               <div className="text-xs text-gray-400 uppercase tracking-wider">Years Experience</div>
             </div>
             <div>
@@ -266,8 +266,8 @@ export function Hero() {
               <div className="text-xs text-gray-400 uppercase tracking-wider">Brand Clients</div>
             </div>
             <div>
-              <div className="text-3xl font-bold metallic-text mb-1">4K</div>
-              <div className="text-xs text-gray-400 uppercase tracking-wider">Cinema Quality</div>
+              <div className="text-3xl font-bold metallic-text mb-1">8+</div>
+              <div className="text-xs text-gray-400 uppercase tracking-wider">Project Manager</div>
             </div>
           </div>
         </div>

@@ -131,16 +131,16 @@ export const workSamples = [
   },
   {
     id: 10,
-    title: "AI Video Generations",
-    category: "AI",
-    role: "Prompt Engineer, Content Production / Asset Management Lead",
+    title: "Building & Construction — Build Group, FTG & more",
+    category: "Drone",
+    role: "Video & Drone Video, Post-Production / Asset Management Lead",
     description:
-      "Cutting-edge AI video generation workflow using Higgsfield, Seedance, Kling, and next-gen generative tools. Rapid iteration from concept to polished output.",
-    tags: ["AI", "Higgsfield", "Video"],
-    youtubeUrl: "https://www.youtube.com/watch?v=REPLACE_ME",
-    thumbnail: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=900&h=506&fit=crop&q=80",
+      "Video production and digital asset management for Build Group. Large-scale content libraries and production workflows managed to client standards. Project documentary and safety videos.",
+    tags: ["Drone", "Video", "Graphics"],
+    youtubeUrl: "https://youtu.be/X07pzna-4wA",
+    thumbnail: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=900&h=506&fit=crop&q=80",
     accent: "from-zinc-900 via-zinc-800/60 to-zinc-950",
-    cta: "View Project Details"
+    cta: "Watch Project"
   },
   {
     id: 11,

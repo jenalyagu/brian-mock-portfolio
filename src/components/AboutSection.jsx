@@ -6,10 +6,10 @@ const TEAL = "#00C8CE";
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const stats = [
-  { value: "13+", label: "Years Experience" },
+  { value: "15+", label: "Years Experience" },
   { value: "200+", label: "Projects Delivered" },
   { value: "Global", label: "Brand Clients" },
-  { value: "4K", label: "Cinema Quality" },
+  { value: "8+", label: "Project Manager" },
 ];
 
 const skills = [
