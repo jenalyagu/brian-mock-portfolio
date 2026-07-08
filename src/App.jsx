@@ -1,19 +1,31 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { Navbar } from "@/components/Navbar";
 import { HeroScrollSequence } from "@/components/HeroScrollSequence";
 import { CapabilitiesGrid } from "@/components/CapabilitiesGrid";
 import { Footer } from "@/components/Footer";
 import { ScrollManager } from "@/components/ScrollManager";
 import { StickyUI } from "@/components/StickyUI";
-import { AboutSection } from "@/components/AboutSection";
-import { VideoGallery } from "@/components/VideoGallery";
 import { MarqueeDivider } from "@/components/MarqueeDivider";
 import { ColorBarsDivider } from "@/components/ColorBarsDivider";
 import { DemoReel } from "@/components/DemoReel";
 import { ClientLogos } from "@/components/ClientLogos";
-import { Resume } from "@/components/Resume";
-import { ContactModal } from "@/components/ContactModal";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, MotionConfig } from "framer-motion";
+
+// Below-the-fold and modal-only content — deferred into their own chunks.
+// The ~2.7s branded Loader below fully masks the fetch/parse time, so
+// there's no visible delay when these mount.
+const VideoGallery = lazy(() =>
+  import("@/components/VideoGallery").then((m) => ({ default: m.VideoGallery }))
+);
+const AboutSection = lazy(() =>
+  import("@/components/AboutSection").then((m) => ({ default: m.AboutSection }))
+);
+const Resume = lazy(() =>
+  import("@/components/Resume").then((m) => ({ default: m.Resume }))
+);
+const ContactModal = lazy(() =>
+  import("@/components/ContactModal").then((m) => ({ default: m.ContactModal }))
+);
 
 function Loader({ onGone }) {
   const [progress, setProgress] = useState(0);
@@ -82,33 +94,39 @@ function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-[#000] text-white overflow-x-hidden pb-14 md:pb-0">
-      <Loader onGone={() => {}} />
+    <MotionConfig reducedMotion="user">
+      <div className="relative min-h-screen bg-[#000] text-white overflow-x-hidden pb-14 md:pb-0">
+        <Loader onGone={() => {}} />
 
-      <ScrollManager />
-      <StickyUI onOpenContact={openContact} />
+        <ScrollManager />
+        <StickyUI onOpenContact={openContact} />
 
-      <div className="vignette" />
+        <div className="vignette" />
 
-      <div className="relative z-10">
-        <Navbar onOpenContact={openContact} />
+        <div className="relative z-10">
+          <Navbar onOpenContact={openContact} />
 
-        <main>
-          <HeroScrollSequence onOpenContact={openContact} />
-          <CapabilitiesGrid />
-          <MarqueeDivider />
-          <DemoReel />
-          <ClientLogos />
-          <VideoGallery />
-          <AboutSection />
-          <Resume onOpenContact={openContact} />
-        </main>
+          <main>
+            <HeroScrollSequence onOpenContact={openContact} />
+            <CapabilitiesGrid />
+            <MarqueeDivider />
+            <DemoReel />
+            <ClientLogos />
+            <Suspense fallback={null}>
+              <VideoGallery />
+              <AboutSection />
+              <Resume onOpenContact={openContact} />
+            </Suspense>
+          </main>
 
-        <Footer onOpenContact={openContact} />
+          <Footer onOpenContact={openContact} />
+        </div>
+
+        <Suspense fallback={null}>
+          <ContactModal isOpen={contactOpen} onClose={() => setContactOpen(false)} />
+        </Suspense>
       </div>
-
-      <ContactModal isOpen={contactOpen} onClose={() => setContactOpen(false)} />
-    </div>
+    </MotionConfig>
   );
 }
 

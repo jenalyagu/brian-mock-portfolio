@@ -7,6 +7,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function ScrollManager() {
   useLayoutEffect(() => {
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+
+    // Respect the OS setting: fall back to native scroll instead of
+    // Lenis's smoothed/eased scroll. ScrollTrigger works fine off native
+    // scroll without the lenis.on('scroll', ...) wiring below.
+    if (prefersReducedMotion) return;
+
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),

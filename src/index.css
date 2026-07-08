@@ -148,3 +148,16 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Catch-all for animations not covered by MotionConfig/GSAP-level guards
+   (e.g. plain CSS transitions on hover states). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

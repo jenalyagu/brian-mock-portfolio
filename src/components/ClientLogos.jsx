@@ -60,6 +60,7 @@ export function ClientLogos() {
               <img
                 src={logo.src}
                 alt={logo.name}
+                loading="lazy"
                 className={`relative z-10 ${logo.imgClass ?? 'max-h-8'} max-w-full w-auto object-contain transition-all duration-300 group-hover:brightness-125`}
                 style={{
                   filter: 'grayscale(1) invert(1) brightness(0.8)',

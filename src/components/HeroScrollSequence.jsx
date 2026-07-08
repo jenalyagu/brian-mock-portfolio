@@ -31,6 +31,9 @@ export function HeroScrollSequence({ onOpenContact }) {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
 
     function setSize() {
       canvas.width = window.innerWidth;
@@ -60,6 +63,15 @@ export function HeroScrollSequence({ onOpenContact }) {
       };
       loadNext();
     }, { once: true });
+
+    // Users who've asked for reduced motion get a static hero frame instead
+    // of the pinned scroll-scrub sequence.
+    if (prefersReducedMotion) {
+      if (overlayRef.current) overlayRef.current.style.opacity = 1;
+      return () => {
+        window.removeEventListener('resize', setSize);
+      };
+    }
 
     const frameSt = ScrollTrigger.create({
       trigger: sequenceRef.current,

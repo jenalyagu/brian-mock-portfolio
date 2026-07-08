@@ -88,7 +88,7 @@ export function StickyUI({ onOpenContact }) {
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.3 }}
             onClick={() => scrollTo('hero')}
-            className="fixed bottom-44 md:bottom-28 right-6 z-50 w-10 h-10 cinematic-glass border border-white/10 flex items-center justify-center hover:bg-white/10 hover:border-white/30 transition-all duration-300 group"
+            className="fixed bottom-44 md:bottom-28 right-6 z-50 w-11 h-11 cinematic-glass border border-white/10 flex items-center justify-center hover:bg-white/10 hover:border-white/30 transition-all duration-300 group"
             aria-label="Back to top"
           >
             <ArrowUp className="w-4 h-4 text-white/60 group-hover:text-white transition-colors" />
